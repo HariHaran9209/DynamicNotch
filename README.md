@@ -1,14 +1,14 @@
-----
+
 Dynamic Notch Bar App
 
 This lightweight android application transforms the notification area of your phone into an animated and dynamic user interface. This is the first application of its kind that does not require any Modifications to be made to the system files of the android operating system or rooting of the device itself.
 
 The application has been created in response to the frustration I had with similar applications available from the Google Play Store, which were riddled with advertisements and frequently crashed or become inoperative during the day.
-----
+
 ## Demo
 
 To see the application in action, watch the **[SCREEN RECORDING](https://youtube.com/shorts/pfewdqGORBo?feature=share)**.
-----
+
 ## Reasons for Creating the Application
 
 I've been using a very popular app to create a Dynamic Notch Bar, only to be disappointed because:
@@ -28,7 +28,7 @@ This is what I wanted from the Dynamic Notch Bar App:
 • No advertisements, no crashes, no bloatware.
 
 This app will launch itself automatically every time my phone is turned on and will run silently in the background without being visible.
-----
+
 # Features 
 
 1. A notification bar that is shown on top of any other application in full screen width.
@@ -37,9 +37,9 @@ This app will launch itself automatically every time my phone is turned on and w
 4. The time is always shown in the notification bar.
 5. The bar will automatically start when the phone turns on.
 6. No ads, no tracking, no permission to connect to the internet.
-----
+
 # Installation
-----
+
 ## System Requirements
 1. Android 10 or above(minSdk 29)
 2. Enable "Install from unknown sources". Normal for sideloading, this application is not available on the Play Store
@@ -52,7 +52,7 @@ This app will launch itself automatically every time my phone is turned on and w
 1. Download 'app-debug.apk' from Download Latest Release
 2. Open APK File on your phone and hit install when prompted on next screen.
 3. Now open application, give both the requested permissions and press "Start Notch Bar"
-----
+
 # Permissions Required 
 
 | Permission              | Why is it required?                                                   |
@@ -62,14 +62,14 @@ This app will launch itself automatically every time my phone is turned on and w
 | BIND_NOTIFICATION_LISTENER_SERVICE |To read incoming notifications to show them on the notification bar |
 | RECEIVE_BOOT_COMPLETED |To automatically open the notification bar upon rebooting of phone     |
 *NO PERMISSION REQUIRES INTERNET CONNECTION
-----
+
 ## 🔧 MIUI-Specific Setup (Redmi / Xiaomi)
 
 MIUI shuts down background apps aggressively. Needs to be done once after installation:
 
 1. **Settings → Apps → Manage Apps → Dynamic Notch → Autostart** → On
 2. **Settings → Battery → Battery Saver → Dynamic Notch** → None
-----
+
 ## 🏗️ Technical Stack
 
 - **Language:** Kotlin
@@ -77,7 +77,7 @@ MIUI shuts down background apps aggressively. Needs to be done once after instal
 - **Target SDK:** 34 (Android 14)
 - **Primary APIs:** `WindowManager` (overlay), `NotificationListenerService`, `BroadcastReceiver` (charging), `ForegroundService`
 - **Uses no third-party libraries** — only Android SDK
-----
+
 ## 📁 Project Directory Structure
 
 ```
@@ -92,7 +92,6 @@ app/src/main/
 │   └── overlay_bar.xml              // Overlay bar UI
 └── AndroidManifest.xml
 ```
-----
 ## 🔨 Build from Source
 
 ```bash
@@ -103,7 +102,6 @@ cd dynamic-notch
 ```
 
 Needs JDK 17 and Android SDK (command line tools, platform 2
-----
 ## 📋 Hackathon Notes
 
 - Signed with the debug key (OK according to competition requirements)
