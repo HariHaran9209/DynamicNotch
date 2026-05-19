@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/layout_overlay_bar.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/layout/overlay_bar.xml"
+    }
+]

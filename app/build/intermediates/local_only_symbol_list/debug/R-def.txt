@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+color accent
+color bar_background
+color text_primary
+id appIcon
+id barRoot
+id btnNotif
+id btnOverlay
+id btnStart
+id notifTitle
+id statusText
+id timeText
+layout activity_main
+layout overlay_bar
+string app_name
