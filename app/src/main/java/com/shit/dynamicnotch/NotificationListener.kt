@@ -7,19 +7,45 @@ import android.service.notification.StatusBarNotification
 
 class NotificationListener : NotificationListenerService() {
 
-    override fun onNotificationPosted(sbn: StatusBarNotification) {
-        val extras = sbn.notification.extras
-        val title = extras.getString(Notification.EXTRA_TITLE) ?: return
-        val text = extras.getString(Notification.EXTRA_TEXT) ?: ""
+    // Merge everything into ONE companion object
+    companion object {
+        var instance: NotificationListener? = null
+        var currentNotif: StatusBarNotification? = null
+    }
 
-        // Skip our own notification
+    override fun onListenerConnected() {
+        instance = this
+    }
+
+    override fun onListenerDisconnected() {
+        instance = null
+    }
+
+    override fun onNotificationPosted(sbn: StatusBarNotification) {
+        // Don't show notifications from our own app
         if (sbn.packageName == packageName) return
 
+        val extras = sbn.notification.extras
+        
+        // FIXED TYPO: Changed 'Notitfication' to 'Notification'
+        val title = extras.getString(Notification.EXTRA_TITLE) ?: return
+        val text = extras.getCharSequence(Notification.EXTRA_TEXT)?.toString() ?: ""
+
+        // Sending the broadcast to the OverlayService
         val intent = Intent(OverlayService.ACTION_SHOW_NOTIFICATION).apply {
             putExtra(OverlayService.EXTRA_TITLE, title)
             putExtra(OverlayService.EXTRA_TEXT, text)
-            putExtra(OverlayService.EXTRA_APP, sbn.packageName)
+            putExtra(OverlayService.EXTRA_PACKAGE, sbn.packageName)
+            putExtra(OverlayService.EXTRA_NOTIF_KEY, sbn.key)
+            // Ensure this matches your broadcast receiver setup in OverlayService
+            setPackage(packageName) 
         }
         sendBroadcast(intent)
+
+        saveCurrentNotif(sbn)
+    }
+
+    private fun saveCurrentNotif(sbn: StatusBarNotification) {
+        currentNotif = sbn
     }
 }

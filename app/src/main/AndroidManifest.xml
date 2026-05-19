@@ -22,8 +22,12 @@
 
         <service
             android:name=".OverlayService"
-            android:foregroundServiceType="mediaPlayback"
-            android:exported="false" />
+            android:foregroundServiceType="specialUse"
+            android:exported="false">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="dynamic_overlay" />
+        </service>
 
         <service
             android:name=".NotificationListener"

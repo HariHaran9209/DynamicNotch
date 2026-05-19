@@ -1,10 +1,50 @@
 [
     {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_album_art_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/album_art_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_decline_btn_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/decline_btn_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/layout_overlay_island.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/layout/overlay_island.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_read_btn_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/read_btn_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_island_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/island_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_reply_btn_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/reply_btn_bg.xml"
+    },
+    {
         "merged": "com.yourname.dynamicnotch.app-merged_res-31:/layout_activity_main.xml.flat",
         "source": "com.yourname.dynamicnotch.app-main-33:/layout/activity_main.xml"
     },
     {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_reply_input_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/reply_input_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_avatar_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/avatar_bg.xml"
+    },
+    {
         "merged": "com.yourname.dynamicnotch.app-merged_res-31:/layout_overlay_bar.xml.flat",
         "source": "com.yourname.dynamicnotch.app-main-33:/layout/overlay_bar.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_play_btn_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/play_btn_bg.xml"
+    },
+    {
+        "merged": "com.yourname.dynamicnotch.app-merged_res-31:/drawable_accept_btn_bg.xml.flat",
+        "source": "com.yourname.dynamicnotch.app-main-33:/drawable/accept_btn_bg.xml"
     }
 ]
